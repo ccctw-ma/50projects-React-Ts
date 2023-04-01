@@ -7,7 +7,6 @@
   flex-direction: column;
 }
 
-
 .App h1 {
   text-align: center;
   margin: 2rem 0;
@@ -17,8 +16,19 @@
 
 
 .module{
-
   display: flex;
   max-width: 200px;
   overflow: auto;
 }
+
+.container{
+  margin: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  
+}
+

@@ -7,8 +7,8 @@
  */
 
 import { useEffect, useMemo } from "react";
-import { Link } from "react-router-dom";
 import styles from "./App.module.css";
+import Card from "./components/card";
 const modules = require.context("./modules", true, /\.tsx$/);
 
 export default function App() {
@@ -21,22 +21,17 @@ export default function App() {
     }, []);
 
     useEffect(() => {
-        // console.log(moduleNams);
+        console.log(moduleNames.length);
     }, [moduleNames]);
 
     return (
         <div className={styles.App}>
             <h1>WelCome To My 50projects </h1>
 
-            <div>
-                {moduleNames.map((name) => {
-                    return (
-                        <div key={name}>
-                            <h2>{name}</h2>
-                            <Link to={name}>{name}</Link>
-                        </div>
-                    );
-                })}
+            <div className={styles.container}>
+                {moduleNames.map((name) => (
+                    <Card moduleName={name} key={name} />
+                ))}
             </div>
         </div>
     );
