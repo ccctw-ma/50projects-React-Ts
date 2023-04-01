@@ -1,0 +1,24 @@
+.App {
+  display: flex;
+  position: relative;
+  background-color: #f5f5f5;
+  text-align: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+
+.App h1 {
+  text-align: center;
+  margin: 2rem 0;
+  color: rgb(179, 131, 226);
+  font-size: 3rem;
+}
+
+
+.module{
+
+  display: flex;
+  max-width: 200px;
+  overflow: auto;
+}
