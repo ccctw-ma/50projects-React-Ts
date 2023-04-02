@@ -23,6 +23,7 @@ export default function FormInputWave() {
                             {"Email".split("").map((c, i) => (
                                 <span
                                     style={{ transitionDelay: `${i * 50}ms` }}
+                                    key={i}
                                 >
                                     {c}
                                 </span>
@@ -35,6 +36,7 @@ export default function FormInputWave() {
                             {"Password".split("").map((c, i) => (
                                 <span
                                     style={{ transitionDelay: `${i * 50}ms` }}
+                                    key={i}
                                 >
                                     {c}
                                 </span>

@@ -49,6 +49,7 @@
 }
 
 .avatar {
+    flex: 1;
     border-radius: 50%;
     border: 10px solid #2a2a72;
     height: 150px;

@@ -87,13 +87,11 @@ export default function GithubProfiles() {
                             errorInfo
                         ) : (
                             <>
-                                <div>
-                                    <img
-                                        src={userInfo?.avatar_url}
-                                        alt={userInfo?.name}
-                                        className={styles.avatar}
-                                    />
-                                </div>
+                                <img
+                                    src={userInfo?.avatar_url}
+                                    alt={userInfo?.name}
+                                    className={styles.avatar}
+                                />
                                 <div className={styles.userInfo}>
                                     <h2>{userInfo?.name || userInfo?.login}</h2>
                                     {userInfo?.bio ? <p>{userInfo.bio}</p> : ""}

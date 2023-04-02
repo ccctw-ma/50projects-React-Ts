@@ -35,7 +35,7 @@ const GoodCheapFast: React.FC = () => {
                     name="good"
                     id="good"
                     checked={good}
-                    defaultChecked={false}
+                    // defaultChecked={false}
                     className={styles.toggle}
                     ref={goodCheckBox}
                     onChange={(e) => {
@@ -55,7 +55,7 @@ const GoodCheapFast: React.FC = () => {
                     id="cheap"
                     className={styles.toggle}
                     checked={cheap}
-                    defaultChecked={false}
+                    // defaultChecked={false}
                     ref={cheapCheckBox}
                     onChange={(e) => {
                         setSelected(2);
@@ -74,7 +74,7 @@ const GoodCheapFast: React.FC = () => {
                     id="fast"
                     className={styles.toggle}
                     ref={fastCheckBox}
-                    defaultChecked={false}
+                    // defaultChecked={false}
                     checked={fast}
                     onChange={(e) => {
                         setSelected(3);
@@ -86,10 +86,7 @@ const GoodCheapFast: React.FC = () => {
                 </label>
                 <span>Fast</span>
             </div>
-            <div>
-                <input type="checkbox" name="test" id="test" />
-                <label htmlFor="test">Test</label>
-            </div>
+     
         </div>
     );
 };

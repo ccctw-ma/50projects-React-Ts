@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 /*
  * @Author: msc
  * @Date: 2022-08-11 21:39:54
@@ -7,15 +6,21 @@
  * @Description:
  */
 
-import React, { useRef, useState } from "react";
+import React, { useMemo, useRef, useState } from "react";
 import styles from "./index.module.css";
 
 const DrawingApp: React.FC = () => {
     const [color, setColor] = useState<string>("black");
-    const [size, setSize] = useState<number>(10);
+    const [size, setSize] = useState<number>(0);
     const [isPressed, setIsPressed] = useState<boolean>(false);
 
     const canvas = useRef<HTMLCanvasElement>(null);
+
+
+    const [clientWidth, clientHeight] = useMemo(() => [
+            document.documentElement.clientWidth,
+            document.documentElement.clientHeight,
+        ], []);
 
     let x: number | undefined;
     let y: number | undefined;
@@ -38,6 +43,7 @@ const DrawingApp: React.FC = () => {
         ctx!.stroke();
     };
 
+
     return (
         <div
             className={styles.main}
@@ -48,8 +54,8 @@ const DrawingApp: React.FC = () => {
             }}
         >
             <canvas
-                width={800}
-                height={600}
+                width={~~(clientWidth * 0.8)}
+                height={~~(clientHeight * 0.8)}
                 ref={canvas}
                 onMouseDown={(e) => {
                     setIsPressed(true);
@@ -67,7 +73,10 @@ const DrawingApp: React.FC = () => {
                     }
                 }}
             ></canvas>
-            <div className={styles.toolbox}>
+            <div
+                className={styles.toolbox}
+                style={{ width: `${~~(clientWidth * 0.8) + 4}px` }}
+            >
                 <button
                     onClick={() => {
                         setSize(Math.max(5, size - 5));

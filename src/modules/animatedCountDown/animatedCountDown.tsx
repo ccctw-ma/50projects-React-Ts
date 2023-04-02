@@ -20,7 +20,6 @@ export default function AnimatedCountDown() {
     }, [run]);
     return (
         <div className={styles.main}>
-            {index}
             <div className={`${styles.counter} ${!run && styles.hide}`}>
                 <div className={styles.nums}>
                     {new Array(num).fill(0).map((_, i) => {

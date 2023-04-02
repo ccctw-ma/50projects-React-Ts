@@ -5,6 +5,7 @@
   justify-content: space-around;
   align-items: center;
   margin: auto;
+  overflow: hidden;
   /* padding: 50px; */
 }
 

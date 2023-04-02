@@ -8,7 +8,9 @@ const Card: React.FC<{ moduleName: string }> = ({ moduleName }) => {
             <div>
                 <h3>{moduleName}</h3>
             </div>
-            <div></div>
+            <div>
+                <Link to={moduleName}>1</Link>
+            </div>
         </div>
     );
 };

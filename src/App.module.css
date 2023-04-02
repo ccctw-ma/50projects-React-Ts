@@ -3,7 +3,8 @@
   position: relative;
   background-color: #f5f5f5;
   text-align: center;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
   flex-direction: column;
 }
 
@@ -15,20 +16,26 @@
 }
 
 
-.module{
-  display: flex;
-  max-width: 200px;
-  overflow: auto;
-}
-
-.container{
-  margin: 2rem;
+.container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  
+  margin: 0 4rem 4rem 4rem;
+  justify-content: space-between;
+  gap: 4rem;
 }
+
+.navigation {
+  scrollbar-width: none;
+  /* firefox */
+  -ms-overflow-style: none;
+  /* IE 10+ */
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.navigation::-webkit-scrollbar {
+  display: none;
+}
+
+
 
